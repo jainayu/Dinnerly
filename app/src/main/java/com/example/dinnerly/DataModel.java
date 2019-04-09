@@ -1,8 +1,8 @@
 package com.example.dinnerly;
 
 public class DataModel {
-    public static final String RESTRAUNT_DETAILS_VIEW_TYPE="RESTRAUNT_DETAILS";
-    public static final String RESTRAUNT_MENU_VIEW_TYPE="RESTRAUNT_MENU";
+    public static final String RESTAURANT_DETAILS_VIEW_TYPE ="RESTAURANT_DETAILS";
+    public static final String RESTAURANT_MENU_VIEW_TYPE ="RESTAURANT_MENU";
     public static final String SELECTED_MENU_VIEW_TYPE="SELECTED_MENU";
 
     String text;
