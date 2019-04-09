@@ -8,17 +8,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="USER LOGIN"
+        android:text="USER REGISTERATION"
         android:layout_marginTop="40dp"
-        android:textSize="40sp"
+        android:textSize="30sp"
         android:textColor="#000"/>
-
     <EditText
-        android:id="@+id/LoginEmail"
+        android:id="@+id/Email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -27,7 +27,7 @@
         android:hint="Email Id" />
 
     <EditText
-        android:id="@+id/LoginPassword"
+        android:id="@+id/Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -35,7 +35,7 @@
         android:layout_marginRight="20dp"
         android:hint="Password" />
     <Button
-        android:id="@+id/buttonLogin"
+        android:id="@+id/buttonRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -43,13 +43,13 @@
 
         android:layout_marginRight="20dp"
         android:layout_gravity="center_horizontal"
-        android:text="Login"/>
+        android:text="Register"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="90dp"
         android:layout_gravity="center_horizontal"
-        android:text="Dont have an Account? Register here"
-        android:id="@+id/Register"/>
+        android:text="Already have an account? Login here."
+        android:id="@+id/login"/>
 
 </LinearLayout>
