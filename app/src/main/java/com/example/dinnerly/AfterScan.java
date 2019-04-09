@@ -34,12 +34,12 @@ public class AfterScan extends AppCompatActivity {
         DataModel dataModel = new DataModel();
 
         dataModel.setText("");
-        dataModel.setViewType(DataModel.RESTRAUNT_DETAILS_VIEW_TYPE);
+        dataModel.setViewType(DataModel.RESTAURANT_DETAILS_VIEW_TYPE);
         dataModels.add(dataModel);
         dataModel = new DataModel();
 
         dataModel.setText("");
-        dataModel.setViewType(DataModel.RESTRAUNT_MENU_VIEW_TYPE);
+        dataModel.setViewType(DataModel.RESTAURANT_MENU_VIEW_TYPE);
         dataModels.add(dataModel);
         dataModel = new DataModel();
 
