@@ -38,7 +38,7 @@ public class Home extends AppCompatActivity {
      */
     private ViewPager mViewPager;
     private FirebaseAuth firebaseAuth;
-    private ProgressDialog progressDialog;
+    public ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,12 +99,13 @@ public class Home extends AppCompatActivity {
         }
 
         if(id == R.id.action_logout){
-            /*progressDialog.setMessage("logging out...");
+            progressDialog = new ProgressDialog(this);
+            progressDialog.setMessage("logging out...");
             progressDialog.show();
             firebaseAuth.signOut();
             progressDialog.dismiss();
             finish();
-            startActivity(new Intent(this,MainActivity.class));*/
+            startActivity(new Intent(this,MainActivity.class));
             return true;
         }
 
