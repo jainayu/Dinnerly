@@ -3,6 +3,7 @@ package com.example.dinnerly;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -18,8 +19,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
 public class Home extends AppCompatActivity {
 
@@ -58,7 +62,7 @@ public class Home extends AppCompatActivity {
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
-        // Set up the ViewPager with the sections adapter.
+        // Set up the ViewPager with the sections adapter
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
@@ -67,21 +71,23 @@ public class Home extends AppCompatActivity {
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
-        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        /*
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });*/
+        });
+        */
 
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        //Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_home, menu);
         return true;
     }
@@ -190,5 +196,31 @@ public class Home extends AppCompatActivity {
             }
             return null;
         }
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        //requestCode is the unique identifier to intentifiy two different requests
+        //resultCode tell ki operation successfull tha ya nai
+        //Intent data is the message that OS passes to us
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode,resultCode,data);
+        if(result != null){
+            if(result.getContents()==null){
+                showToast("you cancelled");
+            }
+            else{
+                showToast(result.getContents());
+                //print(result.getContents());
+                Intent intent= new Intent(Home.this,AfterScan.class);
+                //intent.putExtra("message",result.getContents());
+                startActivity(intent);
+            }
+        }
+        else{
+            showToast("unable to find data");
+        }
+    }
+
+    public void showToast(String message){
+        Toast.makeText(Home.this,message,Toast.LENGTH_LONG).show();
     }
 }

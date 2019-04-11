@@ -4,11 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AfterScan">
+    tools:context=".AfterScan"
+    android:orientation="vertical">
 
-    <android.support.v7.widget.RecyclerView
+    <fragment
+        android:id="@+id/restaurant_deatils_fragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/recyclerView"/>
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:name="com.example.dinnerly.RestaurantDetails"
+        />
+
+    <fragment
+        android:id="@+id/selected_menu_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:name="com.example.dinnerly.SelectedMenu"/>
+
+    <fragment
+        android:id="@+id/restaurant_menu_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:name="com.example.dinnerly.RestaurantMenu"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order Now"
+        android:id="@+id/ordernow"/>
 
 </LinearLayout>
