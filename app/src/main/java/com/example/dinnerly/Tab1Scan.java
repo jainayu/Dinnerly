@@ -34,8 +34,6 @@ public class Tab1Scan extends Fragment {
                 integrator.setBeepEnabled(false);
                 integrator.setBarcodeImageEnabled(false);
                 integrator.initiateScan();
-
-
                 //integrator.setScanningRectangle(450, 450);
                 //basically initiateScan internally passes an intent to OS and fir iska
                 // code tu hoga and that(android will call) will call onActivityResult
