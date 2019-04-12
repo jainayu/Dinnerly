@@ -7,27 +7,42 @@
     tools:context=".AfterScan"
     android:orientation="vertical">
 
-    <fragment
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+        <fragment
         android:id="@+id/restaurant_deatils_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:name="com.example.dinnerly.RestaurantDetails"
+        android:name="com.example.dinnerly.RestaurantDetailsFragment"
         />
+    </LinearLayout>
 
-    <fragment
-        android:id="@+id/selected_menu_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:name="com.example.dinnerly.SelectedMenu"/>
 
     <fragment
         android:id="@+id/restaurant_menu_fragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="1"
-        android:name="com.example.dinnerly.RestaurantMenu"/>
+
+        android:name="com.example.dinnerly.RestaurantMenuFragment"/>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/container">
+        <!--<fragment-->
+            <!--android:id="@+id/selected_menu_fragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:name="com.example.dinnerly.SelectedMenuFragment"/>-->
+    </FrameLayout>
+
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -12,11 +12,12 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class RestaurantDetails extends Fragment {
+public class RestaurantDetailsFragment extends Fragment {
 
-    private TextView textView;
+    private TextView restDet;
+    private TextView restNo;
 
-    public RestaurantDetails() {
+    public RestaurantDetailsFragment() {
         // Required empty public constructor
     }
 
@@ -26,8 +27,8 @@ public class RestaurantDetails extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_restraunt_details, container, false);
-        textView = (TextView)view.findViewById(R.id.rstdet);
-
+        restDet = (TextView)view.findViewById(R.id.rstname);
+        restNo = (TextView)view.findViewById(R.id.rstno);
         return view;
 
     }

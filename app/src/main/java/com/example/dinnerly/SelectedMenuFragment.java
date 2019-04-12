@@ -19,12 +19,13 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SelectedMenu extends Fragment {
+public class SelectedMenuFragment extends Fragment {
 
     ExpandableListView expandableListView;
+    String[] selectedItems;
+    int[] ind;
 
-
-    public SelectedMenu() {
+    public SelectedMenuFragment() {
         // Required empty public constructor
     }
 
@@ -36,42 +37,53 @@ public class SelectedMenu extends Fragment {
         View view = inflater.inflate(R.layout.fragment_selected_menu, container, false);
         expandableListView = (ExpandableListView) view.findViewById(R.id.expandableListView);
 
-        /*Intent intent = getIntent();
+        Bundle bundle = getArguments();
+        if(bundle!=null) {
+            selectedItems = bundle.getStringArray("selectedItems");
+            ind = bundle.getIntArray("ind");
+        }
+
+        /*
+        Intent intent = getIntent();
         int index = intent.getIntExtra("index", 0);
         String count = intent.getStringExtra("count");
         Bundle bundle = getIntent().getExtras();
         String selectedItems[] = bundle.getStringArray("selectedItems");
         */
-        /*final List<String> heading = new ArrayList<>();
-        heading.add("heading1");
-        heading.add("heading 2");
+        List<String> childList = new ArrayList<>();;
+        final List<String> heading = new ArrayList<>();
+        heading.add("AJ");
+        /*heading.add("heading 2");
         heading.add("heading 3");
-        heading.add("heading 4");
+        heading.add("heading 4");*/
 
-        List<String> childList = new ArrayList<>();
-        childList.add(selectedItems[index]);
-        childList.add("item 2");
+        if(ind != null) {
+            for (int i = 0; i < ind.length; i++) {
+                if (ind[i] > 0) {
+                    childList.add(selectedItems[i]);
+                }
+            }
+        }
 
         HashMap<String,List<String>> children = new HashMap<>();
         for(String title:heading) {
             children.put(title,childList);
         }
 
-        MyAdapter myAdapter = new MyAdapter(this,heading, children);
+        MyAdapter myAdapter = new MyAdapter(getActivity(),heading, children);
         expandableListView.setAdapter(myAdapter);
         expandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
 
             @Override
             public void onGroupExpand(int groupPosition) {
-                Toast.makeText(getApplicationContext(),
+                Toast.makeText(getActivity(),
                         heading.get(groupPosition) + " List Expanded.",
                         Toast.LENGTH_SHORT).show();
             }
         });
-*/
         return view;
     }
-/*
+
 
     void setListener() {
 
@@ -82,7 +94,7 @@ public class SelectedMenu extends Fragment {
             public boolean onGroupClick(ExpandableListView listview, View view,
                                         int group_pos, long id) {
 
-                Toast.makeText(MainActivity.this,
+                Toast.makeText(getActivity(),
                         "You clicked",
                         Toast.LENGTH_SHORT).show();
                 return false;
@@ -106,14 +118,4 @@ public class SelectedMenu extends Fragment {
                         previousGroup = groupPosition;
                     }});
     }
-
-    @Override
-    public void onClick(View v) {
-        if(v== next){
-            startActivity(new Intent(this,Filter.class));
-        }
-    }
-
-*/
-
 }

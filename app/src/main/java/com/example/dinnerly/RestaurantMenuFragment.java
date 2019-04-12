@@ -1,10 +1,12 @@
 package com.example.dinnerly;
 
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +22,8 @@ import java.util.Arrays;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class RestaurantMenu extends Fragment {
+public class RestaurantMenuFragment extends Fragment {
+
     int n=1;
     int i=1;
     String[] selectedItems= new String[70];
@@ -29,8 +32,15 @@ public class RestaurantMenu extends Fragment {
     int ind[] = new int[70];
     int sh[] = new int[70];
     ListView listView1, listView2;
+    OnMessageSendListener onMessageSendListener;
 
-    public RestaurantMenu() {
+
+    public interface OnMessageSendListener{
+        public void onMessageSend(int[] ind, String[] selectedItems);
+
+    }
+
+    public RestaurantMenuFragment() {
         // Required empty public constructor
     }
 
@@ -119,6 +129,7 @@ public class RestaurantMenu extends Fragment {
 
         return  view;
     }
+
     public void setItems(String s, int r)
     {
 
@@ -130,24 +141,37 @@ public class RestaurantMenu extends Fragment {
             //Log.i(TAG, "arr: " + Arrays.deepToString(selectedItems));
             ind[r]= 1;
             //Log.i(TAG, "arrInd: " +Arrays.toString(ind));
-            Intent intent= new Intent(getActivity(),SelectedMenu.class);
-            Bundle bundle = new Bundle();
-            bundle.putStringArray("selectedItems", selectedItems);
-            intent.putExtras(bundle);
+            onMessageSendListener.onMessageSend(ind, selectedItems);
+
+            /*intent.putExtras(bundle);
             intent.putExtra("index",r);
-            startActivity(intent);
+            startActivity(intent);*/
         }
         else
         {
             ind[r]=ind[r]+1;
             //Log.i(TAG, "arrInd: " +Arrays.toString(ind));
-            Intent intent= new Intent(getActivity(),SelectedMenu.class);
+            onMessageSendListener.onMessageSend(ind, selectedItems);
+/*
+            Intent intent= new Intent(getActivity(), SelectedMenuFragment.class);
             intent.putExtra("count",ind);
-            startActivity(intent);
+            startActivity(intent);*/
         }
 
 
     }
+
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        Activity activity = (Activity) context;
+
+        try {
+            onMessageSendListener = (OnMessageSendListener) activity;
+        }catch (ClassCastException e){
+            throw new ClassCastException(activity.toString()+" must implement onMessaageSend");
+        }
+    }
+
 
 
 }
