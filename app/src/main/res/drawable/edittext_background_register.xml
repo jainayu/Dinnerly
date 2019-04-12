@@ -3,6 +3,7 @@
     <corners
         android:radius="10dp"
         />
+
     <padding
         android:left="0dp"
         android:top="0dp"
@@ -15,7 +16,7 @@
         />
     <stroke
         android:width="3dp"
-        android:color="#ffffff"
+        android:color="#ffc427"
         />
 
 </shape>
