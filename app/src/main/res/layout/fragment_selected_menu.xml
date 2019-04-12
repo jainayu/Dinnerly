@@ -4,11 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SelectedMenu">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <ExpandableListView
+
+            android:id="@+id/expandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="@android:color/darker_gray"
+            android:clickable="true"
+            android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+            android:focusable="false"
+            android:divider="@android:color/darker_gray"
+            android:childDivider="@android:color/darker_gray"
+            android:dividerHeight="3dp" >
+        </ExpandableListView>
+
+
+    </LinearLayout>
 
 </FrameLayout>
