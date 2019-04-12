@@ -87,11 +87,11 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     }
     @Override
     public void onClick(View v) {
-        if(v==buttonlogin){
+        if(v == buttonlogin){
             userLogin();
         }
         else if(v==Register){
-            startActivity(new Intent(this,Register.class));
+            startActivity(new Intent(MainActivity.this,Register.class));
         }
 
     }

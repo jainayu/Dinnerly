@@ -27,7 +27,7 @@ public class RestaurantDetails extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_restraunt_details, container, false);
         textView = (TextView)view.findViewById(R.id.rstdet);
-        
+
         return view;
 
     }
