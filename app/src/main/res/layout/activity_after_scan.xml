@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+
         >
         <fragment
         android:id="@+id/restaurant_deatils_fragment"
@@ -30,6 +30,7 @@
         android:name="com.example.dinnerly.RestaurantMenuFragment"/>
 
 
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -47,6 +48,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Order Now"
-        android:id="@+id/ordernow"/>
+        android:id="@+id/ordernow"
+        android:textColor="#FFFFFF"
+        android:background="#000000"/>
 
 </LinearLayout>

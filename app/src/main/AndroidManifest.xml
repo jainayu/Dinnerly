@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".OrderPlaced"></activity>
-        <activity android:name=".AfterScan" />
+        <activity android:name=".AfterScan"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
         <activity android:name=".Register" />
         <activity
             android:name=".Home"

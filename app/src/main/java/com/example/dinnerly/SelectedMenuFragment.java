@@ -52,7 +52,7 @@ public class SelectedMenuFragment extends Fragment {
         */
         List<String> childList = new ArrayList<>();;
         final List<String> heading = new ArrayList<>();
-        heading.add("AJ");
+        heading.add("Avani Jindal");
         /*heading.add("heading 2");
         heading.add("heading 3");
         heading.add("heading 4");*/

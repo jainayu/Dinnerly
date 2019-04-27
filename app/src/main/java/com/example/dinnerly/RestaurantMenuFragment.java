@@ -53,7 +53,7 @@ public class RestaurantMenuFragment extends Fragment {
         listView1 = (ListView) view.findViewById(R.id.list1);
         listView2 = (ListView) view.findViewById(R.id.list2);
 
-        String[] categories = {"Category1","Category2","Category3","Category4","Category5","Category6"};
+        String[] categories = {"Drinks","Starters","Chinese","Indian","Breads","Deserts"};
         ListAdapter adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,categories);
         listView1.setAdapter(adapter);
 
@@ -63,8 +63,8 @@ public class RestaurantMenuFragment extends Fragment {
                 String category= String.valueOf(parent.getItemAtPosition(position));
 
                 if(position==0){
-                    String[] Dishes = {"1.Dish1","1.Dish2","1.Dish3","1.Dish4",
-                            "1.Dish5","1.Dish6"};
+                    String[] Dishes = {"1Dish1   Rs.100","1Dish2   Rs.100","1Dish3   Rs.100","1Dish4   Rs.100",
+                            "1Dish5   Rs.100","1Dish6   Rs.100"};
                     catpsn=position;
                     ListAdapter adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,Dishes);
                     listView2.setAdapter(adapter);
@@ -72,8 +72,8 @@ public class RestaurantMenuFragment extends Fragment {
                 }
 
                 if(position==1){
-                    String[] Dishes = {"2.Dish1","2.Dish2","2.Dish3","2.Dish4",
-                            "2.Dish5","2.Dish6","2.Dish7"};
+                    String[] Dishes = {"2Dish1   Rs.200","2Dish2   Rs.200","2Dish3   Rs.200","2Dish4   Rs.200",
+                            "2Dish5   Rs.200","2Dish6   Rs.200"};
                     catpsn=position;
                     ListAdapter adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,Dishes);
                     listView2.setAdapter(adapter);
@@ -81,32 +81,32 @@ public class RestaurantMenuFragment extends Fragment {
 
                 }
                 if(position==3){
-                    String[] Dishes = {"4.Dish1","4.Dish2","4.Dish3","4.Dish4",
-                            "4.Dish5","4.Dish6"};
+                    String[] Dishes = {"4Dish1   Rs.100","4Dish2   Rs.100","4Dish3   Rs.100","4Dish4   Rs.100",
+                            "4Dish5   Rs.100","4Dish6   Rs.100"};
                     catpsn=position;
                     ListAdapter adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,Dishes);
                     listView2.setAdapter(adapter);
 
                 }
                 if(position==4){
-                    String[] Dishes = {"5.Dish1","5.Dish2","5.Dish3","5.Dish4",
-                            "5.Dish5","5.Dish6","5.Dish7","5.Dish8","5.Dish9","5.Dish10"};
+                    String[] Dishes = {"5Dish1   Rs.100","5Dish2   Rs.100","5Dish3   Rs.100","5Dish4   Rs.100",
+                            "5Dish5   Rs.100","5Dish6   Rs.100","5Dish7   Rs.100","5Dish8   Rs.100","5Dish9   Rs.100","5Dish10   Rs.100"};
                     catpsn=position;
                     ListAdapter adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,Dishes);
                     listView2.setAdapter(adapter);
 
                 }
                 if(position==5){
-                    String[] Dishes = {"6.Dish1","6.Dish2","6.Dish3","6.Dish4",
-                            "6.Dish5"};
+                    String[] Dishes = {"6Dish1   Rs.300","6Dish2   Rs.300","6Dish3   Rs.300","6Dish4   Rs.300",
+                            "6Dish5   Rs.300","6Dish6   Rs.300","6Dish7   Rs.300","6Dish8   Rs.300","6Dish9   Rs.300","6Dish10   Rs.300"};
                     catpsn=position;
                     ListAdapter adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,Dishes);
                     listView2.setAdapter(adapter);
 
                 }
                 if(position==2){
-                    String[] Dishes = {"3.Dish1","3.Dish2","3.Dish3","3.Dish4",
-                            "3.Dish5","3.Dish6","3.Dish7","3.Dish8"};
+                    String[] Dishes = {"3Dish1   Rs.100","3Dish2   Rs.100","3Dish3   Rs.100","3Dish4   Rs.100",
+                            "3Dish5   Rs.100","3Dish6   Rs.100","3Dish7   Rs.100","3Dish8   Rs.100","3Dish9   Rs.100","3Dish10   Rs.100"};
                     catpsn=position;
                     ListAdapter adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,Dishes);
                     listView2.setAdapter(adapter);

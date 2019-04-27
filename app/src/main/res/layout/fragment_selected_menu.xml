@@ -8,20 +8,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        android:background="@drawable/selecteditem_layout"
+        >
 
         <ExpandableListView
 
             android:id="@+id/expandableListView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:listSelector="@android:color/darker_gray"
+            android:listSelector="#ffc427"
             android:clickable="true"
             android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
             android:focusable="false"
-            android:divider="@android:color/darker_gray"
-            android:childDivider="@android:color/darker_gray"
-            android:dividerHeight="3dp" >
+            android:divider="#ffc427"
+            android:childDivider="#ffc427"
+            android:dividerHeight="1dp"
+            android:padding="20dp"
+            >
         </ExpandableListView>
 
 

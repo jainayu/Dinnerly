@@ -5,21 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".OrderPlaced"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center_vertical"
+    >
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:id="@+id/totalamt"
-        android:text="Total amount"
-        android:layout_gravity="center">
+        android:text="Total Amount: Rs 300"
+        android:textSize="30dp"
+        android:gravity="center">
 
     </TextView>
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:id="@+id/uramt"
-        android:text="Your Amount"
-        android:layout_gravity="center">
+        android:text="Your Amount: Rs 300"
+        android:textSize="30dp"
+        android:gravity="center">
 
 
     </TextView>

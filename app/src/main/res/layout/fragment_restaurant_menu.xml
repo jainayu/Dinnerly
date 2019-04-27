@@ -3,38 +3,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RestaurantMenuFragment">
+    tools:context=".RestaurantMenuFragment"
+    android:background="#ffc427"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu"
+        android:textSize="20dp"
+        />
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
         android:layout_marginTop="5dp"
         android:orientation="horizontal"
         android:weightSum="3">
+
         <ListView
             android:id="@+id/list1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dip"
+            android:layout_marginBottom="10dp"
             android:layout_weight="2"
             android:fadingEdge="vertical"
             android:scrollbars="none"
             android:smoothScrollbar="true"
-            android:soundEffectsEnabled="true" />
+            android:soundEffectsEnabled="true"
+            android:layout_gravity="center_horizontal"
+            android:background="#ffffff"
+            android:layout_marginRight="10dp"
+            />
 
         <ListView
             android:id="@+id/list2"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:dividerHeight="1px"
             android:drawSelectorOnTop="false"
             android:fadingEdge="vertical"
             android:padding="0dip"
             android:scrollbars="none"
-            android:smoothScrollbar="true"/>
+            android:smoothScrollbar="true"
+            android:background="#ffffff"
+            />
+    </LinearLayout>
     </LinearLayout>
 
 </FrameLayout>

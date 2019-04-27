@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class AfterScan extends AppCompatActivity implements RestaurantMenuFragment.OnMessageSendListener {
+public class  AfterScan extends AppCompatActivity implements RestaurantMenuFragment.OnMessageSendListener {
     private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

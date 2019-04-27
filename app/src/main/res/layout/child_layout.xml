@@ -5,11 +5,12 @@
 
     <TextView
         android:layout_width="fill_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
 
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/child_items"
-        android:textSize="35sp"
+        android:textSize="20sp"
         android:text="Child Layout"
+        android:fontFamily="roboto"
         android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"/>
 </LinearLayout>

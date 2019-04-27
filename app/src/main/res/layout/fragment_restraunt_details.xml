@@ -4,18 +4,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RestaurantDetailsFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#000000"
+    android:padding="10dp"
+    >
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Restaurant Name: Kalsang AMA Cafe"
-        android:id="@+id/rstname"/>
+        android:text="Restaurant Details"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kalsang AMA Cafe"
+        android:id="@+id/rstname"
+        android:textColor="#FFFFFF"
+        />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Table No.: 08"
-        android:id="@+id/rstno"/>
+        android:id="@+id/rstno"
+        android:textColor="#FFFFFF"
+        />
 
 </LinearLayout>
